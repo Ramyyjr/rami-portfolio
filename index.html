@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rami Jarrahi | Systems Supervisor</title>
+
+https://fonts.googleapis.com
+https://fonts.gstatic.com
+https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap
+
+<style>
+
+:root{
+    --primary:#0078D4;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --gray:#64748b;
+    --white:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--light);
+    color:var(--dark);
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(255,255,255,.95);
+    backdrop-filter: blur(10px);
+    z-index:1000;
+    box-shadow:0 3px 10px rgba(0,0,0,.05);
+}
+
+.nav-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    color:var(--primary);
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:var(--dark);
+    font-weight:500;
+}
+
+.nav-links a:hover{
+    color:var(--primary);
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    background:linear-gradient(135deg,#0078D4,#004578);
+    color:white;
+}
+
+.hero-content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:60px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero-text span{
+    color:#7dd3fc;
+}
+
+.hero-text h2{
+    margin-bottom:20px;
+    font-weight:400;
+}
+
+.hero-text p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.hero-buttons a{
+    display:inline-block;
+    margin-right:15px;
+    padding:14px 32px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.btn-primary{
+    background:white;
+    color:#0078D4;
+}
+
+.btn-secondary{
+    border:2px solid white;
+    color:white;
+}
+
+.profile-image{
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    border:8px solid rgba(255,255,255,.25);
+    overflow:hidden;
+}
+
+.profile-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* SECTIONS */
+
+section{
+    padding:100px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:40px;
+    margin-bottom:10px;
+    color:var(--primary);
+}
+
+/* ABOUT */
+
+.about-content{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:2;
+    color:var(--gray);
+}
+
+/* CARDS */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:var(--primary);
+}
+
+/* TIMELINE */
+
+.timeline{
+    max-width:900px;
+    margin:auto;
+}
+
+.timeline-item{
+    background:white;
+    padding:30px;
+    margin-bottom:25px;
+    border-left:5px solid var(--primary);
+    border-radius:0 12px 12px 0;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+/* STATS */
+
+.stats{
+    background:#0f172a;
+    color:white;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    text-align:center;
+    gap:30px;
+}
+
+.stat h3{
+    font-size:40px;
+    color:#38bdf8;
+}
+
+.stat p{
+    margin-top:10px;
+}
+
+/* CONTACT */
+
+.contact-box{
+    background:white;
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.contact-box p{
+    margin:15px 0;
+}
+
+/* FOOTER */
+
+footer{
+    background:#020617;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:768px){
+
+.hero-text h1{
+    font-size:42px;
+}
+
+.hero-content{
+    text-align:center;
+    justify-content:center;
+}
+
+.profile-image{
+    width:260px;
+    height:260px;
+}
+
+.nav-links{
+    display:none;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="container nav-container">
+<div class="logo">RJ</div>
+
+<div class="nav-links">
+#aboutAbout</a>
+#skillsSkills</a>
+#experienceExperience</a>
+#achievementsAchievements</a>
+#contactContact</a>
+</div>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container hero-content">
+
+<div class="hero-text">
+<h1>Hi, I'm <span>Rami Jarrahi</span></h1>
+
+<h2>Systems Supervisor | IT Operations Leader</h2>
+
+<p>
+Experienced IT professional specializing in enterprise systems,
+Microsoft technologies, IT operations, incident management,
+security compliance, and infrastructure support.
+Passionate about delivering reliable technology solutions,
+leading operational excellence initiatives, and improving
+business services.
+</p>
+
+<div class="hero-buttons">
+#Download CV</a>
+#contactContact Me</a>
+</div>
+
+</div>
+
+<div class="profile-image">
+profile.jpg
+</div>
+
+</div>
+</section>
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+<h2>About Me</h2>
+<p>Professional Profile</p>
+</div>
+
+<div class="about-content">
+
+I am a Systems Supervisor with expertise in managing enterprise
+IT environments, ensuring service reliability, and supporting
+business-critical infrastructure. My experience includes systems
+administration, identity management, Microsoft 365 services,
+incident management, security operations, and process improvement.
+
+I enjoy leading technology initiatives, solving complex operational
+challenges, and helping organizations leverage technology for growth.
+
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Skills & Expertise</h2>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Microsoft 365</h3>
+<p>Exchange Online, Teams, SharePoint, Entra ID, Security & Compliance.</p>
+</div>
+
+<div class="card">
+<h3>Systems Administration</h3>
+<p>Windows Server, Active Directory, User Lifecycle Management.</p>
+</div>
+
+<div class="card">
+<h3>IT Operations</h3>
+<p>Service Delivery, Incident Management, Escalation Management.</p>
+</div>
+
+<div class="card">
+<h3>Security</h3>
+<p>Identity Protection, Access Governance, Risk Management.</p>
+</div>
+
+<div class="card">
+<h3>Leadership</h3>
+<p>Team Coordination, Stakeholder Management, Process Optimization.</p>
+</div>
+
+<div class="card">
+<h3>ITSM</h3>
+<p>ServiceNow, Change Management, Problem Management.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="container">
+
+<div class="stats-grid">
+
+<div class="stat">
+<h3>10+</h3>
+<p>Years Experience</p>
+</div>
+
+<div class="stat">
+<h3>500+</h3>
+<p>Incidents Managed</p>
+</div>
+
+<div class="stat">
+<h3>50+</h3>
+<p>Projects Supported</p>
+</div>
+
+<div class="stat">
+<h3>100%</h3>
+<p>Commitment</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="experience">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Career Journey</h2>
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>Systems Supervisor</h3>
+<h4>[Sheraton Tunis Hotel]</h4>
+<p>2021 - Present</p>
+<p>
+Leading IT operations, managing incidents,
+supporting enterprise systems, and ensuring service continuity.
+</p>
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+<section id="achievements">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Major Achievements</h2>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Service Excellence</h3>
+<p>
+Improved operational efficiency and service reliability
+through process improvements.
+</p>
+</div>
+
+<div class="card">
+<h3>Security Improvements</h3>
+<p>
+Contributed to access governance and security initiatives.
+</p>
+</div>
+
+<div class="card">
+<h3>Incident Leadership</h3>
+<p>
+Successfully coordinated critical incident management activities.
+</p>
+</div>
+
+<div class="card">
+<h3>Digital Transformation</h3>
+<p>
+Supported modernization and cloud technology adoption projects.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Contact</h2>
+</div>
+
+<div class="contact-box">
+
+<h3>Let's Connect</h3>
+
+<p>📧 ramii.jarrahi@gmail.com</p>
+
+<p>📱 +216 53849752</p>
+
+<p>📍 Tunis, Tunisia</p>
+
+<p>💻 GitHub: github.com/Ramyyjr</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Rami Jarrahi | Systems Supervisor
+</p>
+
+</footer>
+
+</body>
+</html>
